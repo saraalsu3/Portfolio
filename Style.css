@@ -1,0 +1,202 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body: Elegant, clean, tech-inspired */
+body {
+  background: linear-gradient(120deg, #f8fafd 0%, #e9e6f6 100%);
+  font-family: 'Inter', 'Segoe UI', 'Playfair Display', 'Georgia', serif;
+  color: #232946;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  transition: background 0.4s;
+}
+
+/* Navigation: Glassmorphism, techy */
+nav {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px) saturate(120%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(38,40,178,0.07);
+  max-width: 900px;
+  margin: 32px auto 32px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 32px;
+  border: 1.5px solid #e0e6f7;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2630b2;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.1rem;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: 
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  color: #fff;
+  background: linear-gradient(90deg, #2630b2 60%, #cd5936 100%);
+  box-shadow: 0 2px 12px rgba(38,40,178,0.10);
+  outline: none;
+}
+
+/* Headings: Gradient, clean, tech */
+h1 {
+  font-family: 'Playfair Display', 'Inter', serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 48px 0 24px 0;
+  background: linear-gradient(90deg, #2630b2 10%, #cd5936 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 6px 32px rgba(38,40,178,0.10), 0 2px 12px rgba(205,89,54,0.08);
+  letter-spacing: 0.04em;
+  transition: text-shadow 0.3s, transform 0.3s;
+}
+
+h3 {
+  color: #2630b2;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 32px 0 16px 0;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+/* Paragraphs: Clean, readable */
+p {
+  color: #232946;
+  text-align: justify;
+  font-size: 1.08rem;
+  margin-bottom: 1.2em;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container divs: Card style */
+div {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(38,40,178,0.06);
+  padding: 24px 32px;
+  margin: 32px auto;
+  max-width: 900px;
+  transition: box-shadow 0.2s;
+}
+
+div:hover {
+  box-shadow: 0 8px 32px rgba(38,40,178,0.12);
+}
+
+/* Profile image: Modern, elegant */
+img {
+  border-radius: 24px;
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  margin: 40px auto 32px auto;
+  box-shadow: 0 8px 32px rgba(38,40,178,0.13), 0 2px 12px rgba(205,89,54,0.09);
+  border: 4px solid #e0e6f7;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.045) rotate(-1.5deg);
+  box-shadow: 0 16px 40px rgba(38,40,178,0.18), 0 4px 16px rgba(205,89,54,0.13);
+}
+
+/* Footer: Minimal, clean */
+footer {
+  background: rgba(255,255,255,0.7);
+  border-top: 1.5px solid #e0e6f7;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0 auto;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 12px rgba(38,40,178,0.04);
+  max-width: 900px;
+}
+
+/* Class styles: Modernized */
+.italicText {
+  font-style: italic;
+  color: #2630b2;
+  opacity: 0.85;
+}
+
+.titles {
+  font-style: italic;
+  color: #cd5936;
+  font-size: 3.2rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.Subtitles {
+  font-style: italic;
+  color: #2630b2;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Draggable paragraphs: Highlighted */
+p[draggable="true"] {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #cd5936;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 0;
+  margin: 16px auto;
+  max-width: 600px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 8px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .titles {
+    font-size: 2rem;
+  }
+  .Subtitles {
+    font-size: 1.3rem;
+  }
+  div {
+    padding: 16px 8px;
+  }
+  img {
+    width: 120px;
+    height: 180px;
+  }
+}
